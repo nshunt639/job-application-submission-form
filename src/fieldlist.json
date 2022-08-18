@@ -1,0 +1,87 @@
+[
+    [
+        {
+            "id": "firstName",
+            "title": "First Name",
+            "placeholder": "First name",
+            "required": "First name is required",
+            "type": "text"
+        },
+        {
+            "id": "lastName",
+            "title": "Last Name",
+            "placeholder": "Last name",
+            "required": "Last name is required",
+            "type": "text"
+        }
+    ],
+    {
+        "id": "email",
+        "title": "Email",
+        "placeholder": "Email",
+        "required": "Email is required",
+        "pattern": {
+            "value": "^(([^<>()[\\]\\\\.,;:\\s@\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$",
+            "message": "Email is not valid. (Format: your-email@gmail.com)"
+        },
+        "type": "email"
+    },
+    {
+        "id": "address1",
+        "title": "Address 1",
+        "placeholder": "Address 1",
+        "type": "text"
+    },
+    [
+        {
+            "id": "city",
+            "title": "City",
+            "placeholder": "City",
+            "type": "text"
+        },
+        {
+            "id": "state",
+            "title": "State",
+            "placeholder": "State",
+            "type": "text"
+        },
+        {
+            "id": "zip",
+            "title": "Zip",
+            "placeholder": "Zip",
+            "type": "text"
+        }
+    ],
+    {
+        "id": "phone",
+        "title": "Phone",
+        "placeholder": "Phone (e.g.: 111-222-3333)",
+        "required": "Phone is required",
+        "type": "text",
+        "pattern": {
+            "value": "^(\\d){3}-(\\d){3}-(\\d){4}$",
+            "message": "Phone is not valid. (Format: 111-222-3333)"
+        }
+    },
+    {
+        "id": "jobTitle",
+        "title": "Job Title",
+        "options": [
+            "Engineer - lead",
+            "Engineer - mid level",
+            "Engineer - junion",
+            "Engineer - front end focused",
+            "Engineer - backend focused",
+            "Engineer - full stack"
+        ],
+        "placeholder": "Please select job title",
+        "type": "select"
+    },
+    {
+        "id": "reason",
+        "title": "Reason",
+        "placeholder": "Describe why you are a good fit for the job you are applying for.",
+        "type": "textarea",
+        "rows": 5
+    }
+]
