@@ -3,7 +3,7 @@
         {
             "id": "firstName",
             "title": "First Name",
-            "placeholder": "First name",
+            "placeholder": "First Name",
             "required": "First name is required",
             "type": "text"
         },
