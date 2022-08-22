@@ -61,7 +61,7 @@ function Input({
                 name={name}
                 errors={errors}
                 render={({ message }) => (
-                    <StyledErrorMessage>{message}</StyledErrorMessage>
+                    <StyledErrorMessage role='alert'>{message}</StyledErrorMessage>
                 )}
             ></ErrorMessage>
         </InputWrapper>
