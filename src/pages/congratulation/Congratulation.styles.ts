@@ -34,6 +34,10 @@ export const DataItemValue = styled.div`
     overflow: hidden;
     text-overflow: ellipsis;
 
+    > label {
+        font-weight: bold;
+    }
+
     ${(props: { rows?: number; multilined?: boolean }) =>
         props.multilined &&
         css`

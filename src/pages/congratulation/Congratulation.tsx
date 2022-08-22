@@ -13,18 +13,19 @@ import { selectData } from 'app/reducers/submissionFormSlice'
 import { useNavigate } from 'react-router-dom'
 
 interface DataItemValueProps {
+    id: string
     title: string
     value: any
     rows?: number
 }
-function DataItemValue({ title, value, rows }: DataItemValueProps) {
+function DataItemValue({ id, title, value, rows }: DataItemValueProps) {
     const multilined = rows != null && rows > 1
     return (
         <DataItemValueWrapper>
             <StyledDataItemValue rows={rows} multilined={multilined}>
-                <strong>{title}</strong>
+                <label htmlFor={id}>{title}</label>
                 {!multilined && ': '}
-                <span>{value}</span>
+                <span id={id}>{value}</span>
             </StyledDataItemValue>
         </DataItemValueWrapper>
     )
@@ -41,6 +42,7 @@ function DataItem({ attrs, data }: DataItemProps) {
                 attrs.map((attrs, i) => (
                     <DataItemValue
                         key={`value-${i}`}
+                        id={attrs.id}
                         title={attrs.title}
                         value={data[attrs.id]}
                         rows={attrs.rows}
@@ -48,6 +50,7 @@ function DataItem({ attrs, data }: DataItemProps) {
                 ))
             ) : (
                 <DataItemValue
+                    id={attrs.id}
                     title={attrs.title}
                     value={data[attrs.id]}
                     rows={attrs.rows}
@@ -81,7 +84,9 @@ function Congratulation() {
                     )
                 )}
                 <DataCollectionFooter>
-                    <button onClick={handleBack}>Back</button>
+                    <button onClick={handleBack} type="button">
+                        Back
+                    </button>
                 </DataCollectionFooter>
             </DataCollection>
         </div>
